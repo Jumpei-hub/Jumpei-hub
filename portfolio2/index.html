@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumpei Abe Portfolio </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="content">
+        <div class="logo">
+        <a href="#">Portfolio.</a>
+        </div>
+        <ul class="menu-list">
+        <div class="icon cancel-btn">
+            <i class="fas fa-times"></i>
+        </div>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Works</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+    </div>
+    </nav>
+
+    <div class="banner"></div>
+
+    <!--------------hello section--------------->
+    <section id="main">
+        <h1>Hello, I'm <br><span>Jumpei Abe</span></h1>
+    </section>
+
+    <!--------------Profile section--------------->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="profile">
+            <div class="col-left">
+                <div><img src="images/profile-1.jpeg"></div>
+            </div>
+                <div class="col-right">
+                    <h3>Hey! &ensp; I'm Jumpei Abe</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.orem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <ul>
+                        <li><i class="fab fa-instagram-square"></i></li> 
+                        <li><i class="fab fa-linkedin"></i></li>
+                        <li><i class="fab fa-twitter-square"></i></li>
+                    </ul>
+                    <a href="#" class="btn">See my CV</a>
+                </div>
+        </div>
+    </section>
+
+    <!--------------Skills section--------------->   
+    <section id="skills">
+        <h2>Skills</h2>
+        <div id="container">
+            <div class="skills">
+                <span>HTML</span>
+                <div class="percent">
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+                <span id="value">70%</span>
+            </div>
+            <div class="skills">
+                <span>CSS</span>
+                <div class="percent">
+                    <div class="progress" style="width: 60%;"></div>
+                </div>
+                <span class="value">60%</span>
+            </div>
+            <div class="skills">
+                <span>JavaScript</span>
+                <div class="percent">
+                    <div class="progress" style="width: 40%;"></div>
+                </div>
+                <span class="value">40%</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!--------------Works section--------------->
+    <section id="works">
+        <div class="h2"><h2>works</h2></div>
+
+    <div id="workbox">
+        <div class="container">
+            <div class="card">
+                <div class="imgBox">
+                    <img src="images/sample.works.jpeg">
+                </div>
+                <div class="content">
+                    <h4>Company name</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="imgBox">
+                    <img src="images/sample.works.jpeg">
+                </div>
+                <div class="content">
+                    <h4>Company name</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="imgBox">
+                    <img src="images/sample.works.jpeg">
+                </div>
+                <div class="content">
+                    <h4>Company name</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+        <!--------------contact section--------------->
+        <section id="contact">
+            <h2>CONTACT</h2>
+                <p>If you have any question or inquery feel free to contact me.</p>
+        <div>
+            <form action="/">
+                <h4>Contact Us</h4>
+                    <input class="fname" type="text" name="name" placeholder="Full name">
+                    <input type="text" name="name" placeholder="Email">
+                    <input type="text" name="name" placeholder="Phone number">
+                    <input type="text" name="name" placeholder="Website">
+                <h5>Message</h5>
+                    <textarea rows="4"></textarea>
+                <button type="submit" href="/">Submit</button>
+            </form>
+        </div>
+        </section>
+    
+        <!--------------Footer section--------------->
+        <footer class="footer">
+            <span class="footer-title">Jumpei Abe</span>
+            <p>© Jumpei Abe 2021. All Rights Reserved.</p>
+        </footer>
+
+
+<script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+    navbar.classList.add("show");
+    menuBtn.classList.add("hide");
+    body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+    body.classList.remove("disabled");
+    navbar.classList.remove("show");
+    menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+    this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+</script>
+</body>
+</html>
